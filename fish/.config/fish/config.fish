@@ -10,14 +10,15 @@ export M2_HOME=/opt/maven
 
 fish_add_path $HOME/.config/bin
 fish_add_path $HOME/.local/bin
-fish_add_path /opt/nvim-linux64/bin
-fish_add_path $JAVA_HOME/bin
-fish_add_path /usr/local/go/bin
-fish_add_path $HOME/go/bin
-fish_add_path $M2_HOME/bin
-#fish_add_path $MAVE_HOME/bin
 fish_add_path $HOME/.fzf/bin
 fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/go/bin
+fish_add_path $HOME/ideaIC-2024.3/idea-IC-243.21565.193/bin
+fish_add_path $JAVA_HOME/bin
+fish_add_path $M2_HOME/bin
+#fish_add_path $MAVE_HOME/bin
+fish_add_path /usr/local/go/bin
+fish_add_path /opt/nvim-linux64/bin
 
 set -U fish_greeting # disable fish greeting
 set -U fish_key_bindings fish_vi_key_bindings
