@@ -72,6 +72,7 @@ return {
   --]]
   {
     "hrsh7th/nvim-cmp",
+    optional = true,
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local has_words_before = function()
@@ -132,6 +133,7 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
+    optional = true,
     opts = function(_, opts)
       local cmp = require("cmp")
       cmp.setup({

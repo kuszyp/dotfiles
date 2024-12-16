@@ -17,7 +17,8 @@ SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_laughedelic_2F_pisces_files:\x7e/\x2econfig/fish/functions/_pisces_append\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_bind_pair\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_insert_identical\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_jump\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_lookup\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_remove\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_should_insert\x2efish\x1e\x7e/\x2econfig/fish/functions/_pisces_skip\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/pisces\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ecatppuccin/fish\x1ejethrokuan/z\x1ejorgebucaran/nvm\x2efish\x1elaughedelic/pisces\x1egazorby/fish\x2dabbreviation\x2dtips
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ecatppuccin/fish\x1ejethrokuan/z\x1ejorgebucaran/nvm\x2efish\x1elaughedelic/pisces\x1egazorby/fish\x2dabbreviation\x2dtips\x1ereitzig/sdkman\x2dfor\x2dfish
+SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:6e738d
 SETUVAR fish_color_cancel:ed8796
@@ -59,5 +60,5 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/kuszyp/ideaIC\x2d2024\x2e3/idea\x2dIC\x2d243\x2e21565\x2e193/bin\x1e/home/kuszyp/\x2ecargo/bin\x1e/opt/maven/bin\x1e/usr/lib/jvm/default\x2djava/bin\x1e/opt/nvim\x2dlinux64/bin\x1e/home/kuszyp/\x2elocal/bin\x1e/home/kuszyp/go/bin\x1e/usr/local/go/bin\x1e/home/kuszyp/\x2efzf/bin
+SETUVAR fish_user_paths:/usr/lib/jvm/jdk\x2d21\x2doracle\x2dx64/bin\x1e/home/kuszyp/ideaIC\x2d2024\x2e3/idea\x2dIC\x2d243\x2e21565\x2e193/bin\x1e/home/kuszyp/\x2ecargo/bin\x1e/opt/maven/bin\x1e/usr/lib/jvm/default\x2djava/bin\x1e/opt/nvim\x2dlinux64/bin\x1e/home/kuszyp/\x2elocal/bin\x1e/home/kuszyp/go/bin\x1e/usr/local/go/bin\x1e/home/kuszyp/\x2efzf/bin
 SETUVAR pisces_pairs:\x28\x2c\x29\x1e\x5b\x2c\x5d\x1e\x7b\x2c\x7d\x1e\x22\x2c\x22\x1e\x27\x2c\x27

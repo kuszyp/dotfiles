@@ -13,30 +13,61 @@ return {
   -- Note
   -- If you are facing errors while using, please check troubleshoot wiki https://github.com/nvim-java/nvim-java/wiki/Troubleshooting
   --]]
-  --  {
-  --    "nvim-java/nvim-java",
-  --    config = false,
-  --    dependencies = {
-  --      {
-  --        "neovim/nvim-lspconfig",
-  --        opts = {
-  --          servers = {
-  --            jdtls = {
-  --              -- your jdtls configuration goes here
-  --            },
-  --          },
-  --          setup = {
-  --            jdtls = function()
-  --              require("java").setup({
-  --                -- your nvim-java configuration goes here
-  --              })
-  --            end,
-  --          },
-  --        },
-  --      },
-  --    },
-  --  },
-  --
+
+  -- {
+  --   "nvim-java/nvim-java",
+  --   config = false,
+  --   dependencies = {
+  --     {
+  --       "neovim/nvim-lspconfig",
+  --       opts = {
+  --         servers = {
+  --           -- Your JDTLS configuration goes here
+  --           jdtls = {
+  --             settings = {
+  --               java = {
+  --                 configuration = {
+  --                   runtimes = {
+  --                     {
+  --                       name = "JDK21",
+  --                       path = "~/.sdkman/candidates/java/21.0.5-oracle",
+  --                     },
+  --                     {
+  --                       name = "JDK23",
+  --                       path = "~/.sdkman/candidates/java/23.0.1-oracle",
+  --                     },
+  --                     {
+  --                       name = "JDK17",
+  --                       path = "~/.sdkman/candidates/java/17.0.12-oracle",
+  --                     },
+  --                   },
+  --                 },
+  --               },
+  --             },
+  --           },
+  --         },
+  --         setup = {
+  --           jdtls = function()
+  --             -- Your nvim-java configuration goes here
+  --             require("java").setup({
+  --               root_markers = {
+  --                 "settings.gradle",
+  --                 "settings.gradle.kts",
+  --                 "pom.xml",
+  --                 "build.gradle",
+  --                 "mvnw",
+  --                 "gradlew",
+  --                 "build.gradle",
+  --                 "build.gradle.kts",
+  --               },
+  --             })
+  --           end,
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
+
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
@@ -47,13 +78,13 @@ return {
   -- The goal of nvim-treesitter is both to provide a simple and easy way to use the interface for tree-sitter in Neovim
   -- and to provide some basic functionality such as highlighting based on it.
   --]]
-  --  {
-  --    "nvim-treesitter/nvim-treesitter",
-  --    opts = {
-  --      ensure_installed = { "java" },
-  --    },
+  --{
+  --  "nvim-treesitter/nvim-treesitter",
+  --  opts = {
+  --    ensure_installed = { "java" },
   --  },
-  --
+  --},
+
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
   --[[ ------------------------------------------------------------------------------------------------------------- ]]
@@ -67,28 +98,28 @@ return {
   -- Set breakpoints and step through code
   -- Inspect the state of the application
   --]]
-  {
-    "mfussenegger/nvim-dap",
-    optional = true,
-    opts = function()
-      -- Simple configuration to attach to remote java debug process
-      -- Taken directly from https://github.com/mfussenegger/nvim-dap/wiki/Java
-      local dap = require("dap")
-      dap.configurations.java = {
-        {
-          type = "java",
-          request = "attach",
-          name = "Debug (Attach) - Remote",
-          hostName = "127.0.0.1",
-          port = 5005,
-        },
-      }
-    end,
-    dependencies = {
-      {
-        "williamboman/mason.nvim",
-        opts = { ensure_installed = { "java-debug-adapter", "java-test" } },
-      },
-    },
-  },
+  --{
+  --  "mfussenegger/nvim-dap",
+  --  optional = true,
+  --  opts = function()
+  --    -- Simple configuration to attach to remote java debug process
+  --    -- Taken directly from https://github.com/mfussenegger/nvim-dap/wiki/Java
+  --    local dap = require("dap")
+  --    dap.configurations.java = {
+  --      {
+  --        type = "java",
+  --        request = "attach",
+  --        name = "Debug (Attach) - Remote",
+  --        hostName = "127.0.0.1",
+  --        port = 5005,
+  --      },
+  --    }
+  --  end,
+  --  dependencies = {
+  --    {
+  --      "williamboman/mason.nvim",
+  --      opts = { ensure_installed = { "java-debug-adapter", "java-test" } },
+  --    },
+  --  },
+  --},
 }
