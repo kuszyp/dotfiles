@@ -1,33 +1,25 @@
 # ### fish shell variables ###
-export HOME=/home/kuszyp
-export GCM_CREDENTIAL_STORE=plaintext
-#export JAVA_HOME=/usr/lib/jvm/default-java
-export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64/
-export M2_HOME=/opt/maven
-# export MAVEN_HOME=/opt/maven
-#export SDKMAN_DIR="$HOME/.sdkman"
+set -gx GCM_CREDENTIAL_STORE plaintext
+set -gx M2_HOME /opt/maven
+set -gx MAVEN_HOME /opt/maven
 
+fish_add_path bin
+fish_add_path $HOME/bin
+fish_add_path $HOME/go/bin
 fish_add_path $HOME/.config/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.fzf/bin
 fish_add_path $HOME/.cargo/bin
-fish_add_path $HOME/go/bin
 fish_add_path $HOME/ideaIC-2024.3/idea-IC-243.21565.193/bin
 fish_add_path $JAVA_HOME/bin
 fish_add_path $M2_HOME/bin
-#fish_add_path $MAVE_HOME/bin
+fish_add_path $MAVEN_HOME/bin
 fish_add_path /usr/local/go/bin
 fish_add_path /opt/nvim-linux64/bin
 
 set -U fish_greeting # disable fish greeting
 set -U fish_key_bindings fish_vi_key_bindings
 set -Ux EDITOR nvim
-
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH ~/.config/bin $PATH
-set -gx PATH ~/.cargo/bin $PATH
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
