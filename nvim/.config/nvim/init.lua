@@ -1,2 +1,2 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- Load the options from the config/options.lua file
+require("config.options")
