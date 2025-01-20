@@ -19,7 +19,7 @@ return {
       -- set a vim motion to <Space> + f + r to resume the previous search
       vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "[F]inder [R]esume" })
       -- set a vim motion to <Space> + f + . to search for Recent Files
-      vim.keymap.set("n", "<leader>r.", builtin.oldfiles, { desc = "[F]ind Recent Files (\".\" for repeat" })
+      vim.keymap.set("n", "<leader>f.", builtin.oldfiles, { desc = "[F]ind Recent Files (\".\" for repeat" })
       -- set a vim motion to <Space> + f + b to search Open Buffers
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind Existing [B]uffers" })
     end, 
