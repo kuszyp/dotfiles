@@ -8,6 +8,10 @@
 
 ## Table of contents
 
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [TODO](#todo)
+
 ## Installation
 
 The color theme i use is [Catppuccin Macchiato](https://github.com/catppuccin/catppuccin).
@@ -40,3 +44,8 @@ Ensure that the below items/packages are installed:
 | stow                                                           |                     |
 
 ## Usage
+
+## TODO
+
+- fix all issues with deprecated modules and libraries
+- add lazygit into nvim
