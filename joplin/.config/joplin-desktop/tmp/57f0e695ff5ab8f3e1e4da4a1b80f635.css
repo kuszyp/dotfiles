@@ -22,9 +22,17 @@
 			border-radius: 3px;
 			background-color: rgb(243, 243, 243);
 		}
+
+		:root {
+			--scrollbar-size: 7px;
+		}
+
 		::-webkit-scrollbar {
-			width: 7px;
-			height: 7px;
+			width: var(--scrollbar-size);
+			height: var(--scrollbar-size);
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: calc(var(--scrollbar-size) / 2);
 		}
 		::-webkit-scrollbar-corner {
 			background: none;
@@ -262,24 +270,26 @@
 			color: black;
 		}
 
-		.not-loaded-resource img {
-			width: 1.15em;
-			height: 1.15em;
-			background: white;
-			padding: 2px !important;
-			border-radius: 2px;
-			box-shadow: 0 1px 3px #000000aa;
-		}
+		
+	.not-loaded-resource img {
+		width: 1.15em;
+		height: 1.15em;
+		background: white;
+		padding: 2px !important;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px #000000aa;
+	}
 
-		a.not-loaded-resource img {
-			margin-right: .2em;
-		}
+	a.not-loaded-resource img {
+		margin-right: .2em;
+	}
 
-		a.not-loaded-resource {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
+	a.not-loaded-resource {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
 
 		.md-checkbox input[type=checkbox]:checked {
 			opacity: 0.7;

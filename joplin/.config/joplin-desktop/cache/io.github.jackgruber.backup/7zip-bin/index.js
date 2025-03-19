@@ -1,0 +1,1 @@
+"use strict";const path=require("path");function getPath(){return"true"===process.env.USE_SYSTEM_7ZA?"7za":"darwin"===process.platform?path.join(__dirname,"mac",process.arch,"7za"):"win32"===process.platform?path.join(__dirname,"win",process.arch,"7za.exe"):path.join(__dirname,"linux",process.arch,"7za")}exports.path7za=getPath(),exports.path7x=path.join(__dirname,"7x.sh");
