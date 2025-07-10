@@ -1,11 +1,32 @@
 return {
-    -- Shortened Github Url
+  --[[
+  {
     "catppuccin/nvim",
+    lazy = true,
     name = "catppuccin",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        -- Make sure to set the color scheme when neovim loads and configures the dracula plugin
-        vim.cmd.colorscheme "catppuccin-macchiato"
-    end
+    opts = {
+      flavor = "macchiato",
+      transparent_background = false,
+    }
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
+  ]]--
+
+  {
+  "rebelot/kanagawa.nvim",
+    lazy = true,
+  },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kanagawa-wave"
+    }
+  },
 }

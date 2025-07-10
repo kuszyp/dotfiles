@@ -2,15 +2,60 @@
 
 ## Description
 
-- The idea to store dotfiles came from [LazyVim for Ambitious Developers](https://lazyvim-ambitious-devs.phillips.codes/).
-- The scripts to initialize/update/clone the dotfiles came from the blog article [Dotfiles: Best way to store in a bare
-  git repository](https://www.atlassian.com/git/tutorials/dotfiles).
+User setup i use on Debian Bookworm (GNOME) distribution.
 
 ## Table of contents
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [TODO](#todo)
+1. [About](#about)
+2. [Stow](#stow)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [TODO](#todo)
+
+## About
+
+## Stow
+
+A symlink farm manager which takes distinct packages of software and/or data located in a separate directories of the filesystem, and makes them appear to be installed in the same place. For example. `/usr/local/bin` could contain symlinks to files within `/usr/local/stow/emacs/bin`, `/usr/local/stow/perl/bin` etc., and likewise recursively for any other subdirectories such as `.../share`, `.../main`, and so on.
+
+Three terms to know before start working with Stow:
+
+- Package,
+- Stow Directory,
+- Target Directory.
+
+```
++-- ~/.dotfiles                 # stow directory
+|   +-- git/                    # package
+|       +-- .gitconfig
+|   +-- tmux/                   # package
+|       +-- .config/------------------------|
+|           +-- tmux/                       |
+|       +-- .tmux.conf                      |
+|   +-- bash/                   # package   |
+|       +-- .bash_completion/               |
+|       +-- .bashrc                         |
+|       +-- .editorconfig                   |
+|   +-- kitty/                              |
+|       +-- .config/------------------------|
+|           +-- kitty/                      |
+|   +-- nvim/                               |
+|       +-- .config/------------------------|
+|           +-- nvim/                       |
+...                                         |
+|_______________|                           |
+        |                                   |
+        |                                   |
+       \ /                                 \ /
+                                      target directory
+
+~/.dotfiles/git/.gitconfig          -> ~/.gitconfig
+~/.dotfiles/tmux/.config/tmux/      -> ~/.config/tmux
+~/.dotfiles/tmux/.tmux.conf         -> ~/.tmux.conf
+~/.dotfiles/kitty/.config/kitty     -> ~/.config/kitty
+~/.dotfiles/nvim/.config/nvim       -> ~/.config/nvim
+...
+```
 
 ## Installation
 
@@ -38,14 +83,56 @@ Ensure that the below items/packages are installed:
 | nvm                                                            |                     |
 | npm                                                            |                     |
 | NodeJS                                                         |                     |
-| nvim                                                           |                     |
-| lazygit                                                        |                     |
+| nvim                                                           | [script](#nvim)                    |
+| lazygit                                                        | [script](#lazygit)  |
 | Go                                                             |                     |
 | stow                                                           |                     |
+
+### nvim
+
+Before installing nvim make sure that the below packages are also installed.
+
+```bash
+# pdflatex used in markdown-preview
+sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+
+# tree-sitter
+git clone https://github.com/tree-sitter/tree-sitter.git
+cd tree-sitter
+make
+sudo make install
+sudo npm install -g tree-sitter-cli
+
+# tree-sitter-latex
+git clone https://github.com/latex-lsp/tree-sitter-latex.git
+cd tree-sitter-latex
+tree-sitter generate
+
+# CLI for mermaid
+npm install -g @mermaid-js/mermaid-cli
+
+```
+
+### lazygit
+
+For Debian 12
+
+```bash
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+
+tar xf lazygit.tar.gz lazygit
+
+sudo install lazygit -D -t /usr/local/bin/
+```
+
+Verify the correct installation using:
+
+```bash
+lazygit --version
+```
 
 ## Usage
 
 ## TODO
-
-- fix all issues with deprecated modules and libraries
-- add lazygit into nvim

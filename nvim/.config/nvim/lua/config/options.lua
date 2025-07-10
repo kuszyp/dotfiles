@@ -1,39 +1,47 @@
--- Left column and similar settings
-vim.opt.number = true -- display line numbers
-vim.opt.relativenumber = true -- display relative line numbers
-vim.opt.numberwidth = 2 -- set width of line number column
-vim.opt.signcolumn = "yes" -- always show sign column
-vim.opt.wrap = false -- display lines as single line
-vim.opt.scrolloff = 10 -- number of lines to keep above/below cursor
-vim.opt.sidescrolloff = 8 -- number of columns to keep to the left/right of cursor
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
 
--- Tab spacing/behavior
-vim.opt.expandtab = true -- convert tabs to spaces
-vim.opt.shiftwidth = 4 -- number of spaces inserted for each indentation level
-vim.opt.tabstop = 4 -- number of spaces inserted for tab character
-vim.opt.softtabstop = 4 -- number of spaces inserted for <Tab> key
-vim.opt.smartindent = true -- enable smart indentation
-vim.opt.breakindent = true -- enable line breaking indentation
+--[[
+-- Custom options
+--
+-- colorcolumn and wrapping long lines
+--]]
 
--- General Behaviors
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.opt.backup = false -- disable backup file creation
-vim.opt.clipboard = "unnamedplus" -- enable system clipboard access
-vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8" -- set file encoding to UTF-8
-vim.opt.mouse = "a" -- enable mouse support
-vim.opt.showmode = false -- hide mode display
-vim.opt.splitbelow = true -- force horizontal splits below current window
-vim.opt.splitright = true -- force vertical splits right of current window
-vim.opt.termguicolors = true -- enable term GUI colors
-vim.opt.timeoutlen = 1000 -- set timeout for mapped sequences
-vim.opt.undofile = true -- enable persistent undo
-vim.opt.updatetime = 100 -- set faster completion
-vim.opt.writebackup = false -- prevent editing of files being edited elsewhere
-vim.opt.cursorline = true -- highlight current line
+-- set to `true` to follow the main branch
+-- you need to have a working rust toolchain to build the plugin
+-- in this case.
+vim.g.lazyvim_blink_main = false
 
--- Searching Behaviors
-vim.opt.hlsearch = true -- highlight all matches in search
-vim.opt.ignorecase = true -- ignore case in search
-vim.opt.smartcase = true -- match case if explicitly stated
+-- custom shell
+vim.g.shell = "fish"
+
+local opt = vim.opt
+
+-- Size of an indent
+opt.shiftwidth = 2
+-- Number of spaces tabs count for
+opt.tabstop = 2
+-- Vertical line indicating text length.
+-- To display many lines put numbere separated by coma (,)
+opt.colorcolumn = "120"
+-- Enable highlight of the current column
+opt.cursorcolumn = true
+opt.textwidth = 120
+opt.wrapmargin = 0
+-- Disable/Enable line wrap
+opt.wrap = true
+-- Wrap lines at convenient points
+opt.linebreak = true
+
+-- LSP Server to use for Python.
+-- Set to "basedpyright" to use basedpyright instead of pyright.
+--vim.g.lazyvim_python_lsp = "pyright"
+-- Set to "ruff_lsp" to use the old LSP implementation version.
+--vim.g.lazyvim_python_ruff = "ruff"
+
+-- Set filetype to `bigfile` for files larger than 1.5 MB
+-- Only vim syntax will be enabled (with the correct filetype)
+-- LSP, treesitter and other ft plugins will be disabled.
+-- mini.animate will also be disabled.
+-- vim.g.bigfile_size = 1024 * 1024 * 1.5 -- 1.5 MB
