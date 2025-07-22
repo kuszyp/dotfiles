@@ -1,5 +1,4 @@
 return {
-  --[[
   {
     "catppuccin/nvim",
     lazy = true,
@@ -16,8 +15,8 @@ return {
       colorscheme = "catppuccin",
     },
   },
-  ]]--
 
+  --[[
   {
   "rebelot/kanagawa.nvim",
     lazy = true,
@@ -26,7 +25,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-wave"
+      colorscheme = "kanagawa-dragon"--"kanagawa-dragon" --"kanagawa-wave"
     }
   },
+  ]]--
+
 }
