@@ -80,13 +80,48 @@ Ensure that the below items/packages are installed:
 | Luarocks 3.11.x                                                |                     |
 | Rust                                                           |                     |
 | rustup                                                         |                     |
-| nvm                                                            |                     |
+| [nvm](#nvm)                                                    | [script](#nvm)      |
 | npm                                                            |                     |
 | NodeJS                                                         |                     |
-| nvim                                                           | [script](#nvim)                    |
-| lazygit                                                        | [script](#lazygit)  |
+| [nvim](#nvim)                                                  | [script](#nvim)     |
+| [lazygit](#lazygit)                                            | [script](#lazygit)  |
 | Go                                                             |                     |
 | stow                                                           |                     |
+
+### nvm
+
+The most up to date installation script for nvm can be found in the [nvm repository](https://github.com/nvm-sh/nvm).
+
+**Important** Below will not form with fish shell, it is meant to be run in bash or zsh.
+
+```bash
+// with curl
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+// or with wget
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+To make it work with fish shell, take a look at [nvm.fish](https://github.com/jorgebucaran/nvm.fish) plugin.
+
+```bash
+fisher install jorgebucaran/nvm.fish
+
+// install the latest Node release
+nvm install latest
+
+// install the latest lts release
+nvm install lts
+```
+
+The `nvm` command activates the specified Node version only in current environment. To make it permanent and available
+in all new shells, add below into `fish.conf`:
+
+```bash
+set --universal nvm_default_version lts
+```
+
+This will set the latest lts as a default version for all new shells.
 
 ### nvim
 
@@ -111,6 +146,8 @@ tree-sitter generate
 # CLI for mermaid
 npm install -g @mermaid-js/mermaid-cli
 
+# neovim
+npm install -g neovim
 ```
 
 ### lazygit
