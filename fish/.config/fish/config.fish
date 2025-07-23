@@ -2,7 +2,7 @@
 set -gx GCM_CREDENTIAL_STORE plaintext
 set -gx M2_HOME /opt/maven
 set -gx MAVEN_HOME /opt/maven
-
+set --universal nvm_default_version lts
 fish_add_path bin
 fish_add_path $HOME/bin
 fish_add_path $HOME/go/bin
