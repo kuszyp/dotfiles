@@ -19,7 +19,8 @@ return {
         "vim",
         "yaml",
         "toml",
-        "latex"
+        "latex",
+        "groovy"
       },
     },
   },

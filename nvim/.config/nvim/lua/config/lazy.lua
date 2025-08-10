@@ -25,6 +25,7 @@ require("lazy").setup({
 
     -- extras.coding
     { import = "lazyvim.plugins.extras.coding.yanky" },
+    { import = "lazyvim.plugins.extras.coding.mini-comment" },
 
     -- extras.editor
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
