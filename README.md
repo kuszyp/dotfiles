@@ -4,6 +4,8 @@
 
 User setup i use on Debian Bookworm (GNOME) distribution.
 
+**08-25-2025** - Updated for Debian 13 Trixie.
+
 ## Table of contents
 
 1. [About](#about)
@@ -72,7 +74,7 @@ Ensure that the below items/packages are installed:
 | [ripgrep](https://github.com/BurntSushi/ripgrep)               |                     |
 | fd-find                                                        |                     |
 | Nerd Fonts                                                     |                     |
-| [bat](https://github.com/sharkdp/bat)                          |                     |
+| [bat](https://github.com/sharkdp/bat)                          | [script](#bat)      |
 | tmux                                                           |                     |
 | [fish shell](https://fishshell.com/)                           |                     |
 | [Kitty](https://sw.kovidgoyal.net/kitty/)                      |                     |
@@ -87,6 +89,10 @@ Ensure that the below items/packages are installed:
 | [lazygit](#lazygit)                                            | [script](#lazygit)  |
 | Go                                                             |                     |
 | stow                                                           |                     |
+
+### bat
+
+After updating Debian 12 to Debian 13 Trixie, you might have to run `$ bat cache --build` before using the bat command.
 
 ### nvm
 
@@ -152,7 +158,13 @@ npm install -g neovim
 
 ### lazygit
 
-For Debian 12
+For **Debian 13 Trixie**
+
+```bash
+$ sudo apt install lazygit
+```
+
+For **Debian 12**
 
 ```bash
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
