@@ -2,7 +2,8 @@ return {
   {
     "stevearc/conform.nvim",
     dependencies = { "mason.nvim" },
-    event = {"BufReadPre", "BufNewFile"},
+    event = { "BufReadPre", "BufNewFile", "BufWritePre" },
+    cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
         javascript = { "prettier" },
@@ -15,10 +16,15 @@ return {
         graphql = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        fish = { "fish_indent" },
+        sh = { "shfmt" },
+      },
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_format = "fallback",
       },
     },
   },
-
 
   {
     "mason-org/mason.nvim",
@@ -30,7 +36,7 @@ return {
         "flake8",
         "prettier",
         "black",
-        "isort"
+        "isort",
       },
     },
   },

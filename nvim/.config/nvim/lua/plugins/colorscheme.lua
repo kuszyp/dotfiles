@@ -4,7 +4,6 @@ return {
   -- CATPPUCCIN THEME
   --
   --]]
-  --[[
   {
     "catppuccin/nvim",
     lazy = true,
@@ -14,23 +13,6 @@ return {
       transparent_background = false,
     }
   },
-  --]]
-
-  --[[
-  -- Remove this after installing new daily build version of LazyVim
-  -- https://github.com/LazyVim/LazyVim/issues/6355
-  --]]
-  --[[
-  {
-		"catppuccin/nvim",
-		opts = function(_, opts)
-			local module = require("catppuccin.groups.integrations.bufferline")
-			if module then
-				module.get = module.get_theme
-			end
-			return opts
-		end,
-	},
 
   {
     "LazyVim/LazyVim",
@@ -38,7 +20,16 @@ return {
       colorscheme = "catppuccin",
     },
   },
-  --]]
+
+  {
+    "akinsho/bufferline.nvim",
+    optional = true,
+    opts = function(_, opts)
+      if (vim.g.colors_name or ""):find("catppuccin") then
+        opts.highlights = require("catppuccin.special.bufferline").get_theme()
+      end
+    end,
+  },
   --[[ END CATPPUCCIN THEME ]]--
 
   --[[
@@ -66,6 +57,7 @@ return {
   -- TOKYONIGHT THEME
   --
   --]]
+  --[[
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -80,6 +72,7 @@ return {
       --colorscheme = "tokyonight-day",
       --colorscheme = "tokyonight-moon",
     },
-  }
+  },
+  --]]
   --[[ END TOKYONIGHT THEME ]]--
 }
