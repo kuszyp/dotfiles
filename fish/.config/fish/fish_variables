@@ -60,6 +60,6 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/kuszyp/\x2esdkman/candidates/java/21\x2e0\x2e6\x2doracle/bin\x1e/home/kuszyp/\x2esdkman/candidates/java/current/bin\x1e/opt/nvim\x2dlinux64/bin\x1e/usr/local/go/bin\x1e/opt/maven/bin\x1e/home/kuszyp/\x2esdkman/candidates/java/21\x2e0\x2e5\x2doracle/bin\x1e/home/kuszyp/ideaIC\x2d2024\x2e3/idea\x2dIC\x2d243\x2e21565\x2e193/bin\x1e/home/kuszyp/\x2ecargo/bin\x1e/home/kuszyp/\x2efzf/bin\x1e/home/kuszyp/\x2elocal/bin\x1e/home/kuszyp/go/bin
+SETUVAR fish_user_paths:/home/kuszyp/\x2esdkman/candidates/java/21\x2e0\x2e9\x2doracle/bin\x1e/home/kuszyp/\x2esdkman/candidates/java/21\x2e0\x2e6\x2doracle/bin\x1e/home/kuszyp/\x2esdkman/candidates/java/current/bin\x1e/opt/nvim\x2dlinux64/bin\x1e/usr/local/go/bin\x1e/opt/maven/bin\x1e/home/kuszyp/\x2esdkman/candidates/java/21\x2e0\x2e5\x2doracle/bin\x1e/home/kuszyp/ideaIC\x2d2024\x2e3/idea\x2dIC\x2d243\x2e21565\x2e193/bin\x1e/home/kuszyp/\x2ecargo/bin\x1e/home/kuszyp/\x2efzf/bin\x1e/home/kuszyp/\x2elocal/bin\x1e/home/kuszyp/go/bin
 SETUVAR nvm_default_version:lts
 SETUVAR pisces_pairs:\x28\x2c\x29\x1e\x5b\x2c\x5d\x1e\x7b\x2c\x7d\x1e\x22\x2c\x22\x1e\x27\x2c\x27

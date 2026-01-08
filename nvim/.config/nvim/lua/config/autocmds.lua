@@ -11,7 +11,7 @@
 -- Disable autoformat for some buffers
 --]]
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua" },
+  pattern = { "lua", "markdown" },
   callback = function()
     vim.b.autoformat = false
   end,
