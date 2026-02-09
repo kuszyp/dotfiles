@@ -76,7 +76,7 @@ Ensure that the below items/packages are installed:
 | Nerd Fonts                                                     |                     |
 | [bat](https://github.com/sharkdp/bat)                          | [script](#bat)      |
 | tmux                                                           |                     |
-| [fish shell](https://fishshell.com/)                           |                     |
+| [fish shell](https://fishshell.com/)                           | [script](#fish-shell) |
 | [Kitty](https://sw.kovidgoyal.net/kitty/)                      |                     |
 | Lua 5.1.x                                                      |                     |
 | Luarocks 3.11.x                                                |                     |
@@ -93,6 +93,15 @@ Ensure that the below items/packages are installed:
 ### bat
 
 After updating Debian 12 to Debian 13 Trixie, you might have to run `$ bat cache --build` before using the bat command.
+
+### fish shell
+
+```bash
+echo 'deb http://download.opensuse.org/repositories/shells:/fish/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/shells:fish.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish/Debian_13/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish.gpg > /dev/null
+sudo apt update
+sudo apt install fish
+```
 
 ### nvm
 
