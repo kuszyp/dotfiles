@@ -10,7 +10,7 @@ return {
     name = "catppuccin",
     opts = {
       flavor = "macchiato",
-      transparent_background = false,
+      transparent_background = true,
     }
   },
 

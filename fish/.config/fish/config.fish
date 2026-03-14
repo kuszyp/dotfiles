@@ -102,7 +102,6 @@ function fish_prompt
     echo -n -s $initial_indicator $whitespace $cwd $git_info $whitespace $ahead $status_indicator $whitespace
 end
 
-
 function _git_ahead
     set -l commits (command git rev-list --left-right '@{upstream}...HEAD' 2>/dev/null)
     if [ $status != 0 ]
@@ -123,11 +122,9 @@ function _git_ahead
     end
 end
 
-
 function _git_branch_name
     echo (command git symbolic-ref HEAD 2>/dev/null | sed -e 's|^refs/heads/||')
 end
-
 
 function _is_git_dirty
     echo (command git status -s --ignore-submodules=dirty 2>/dev/null)

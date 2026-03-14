@@ -29,10 +29,8 @@ opt.colorcolumn = "120"
 opt.cursorcolumn = true
 opt.textwidth = 120
 opt.wrapmargin = 0
--- Disable/Enable line wrap
-opt.wrap = true
--- Wrap lines at convenient points
-opt.linebreak = true
+opt.wrap = false -- Disable line wrap
+opt.linebreak = true -- Wrap lines at convenient points
 -- Try to display whitecharacters
 --opt.list = true
 --opt.listchars = 'tab:» ,lead:•,trail:•'

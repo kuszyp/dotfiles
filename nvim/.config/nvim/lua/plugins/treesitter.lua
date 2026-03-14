@@ -36,11 +36,4 @@ return {
     },
   },
 
-  -- Automatically add closing tags for HTML ans JSX
-  {
-    "windwp/nvim-ts-autotag",
-event = "LazyFile",
-    opts = {},
-  },
-
 }
