@@ -1,6 +1,16 @@
+default: true
+MD009:
+  br_spaces: 2
+  code_blocks: false
+  list_item_empty_lines: true
+  strict: true
 MD013:
   line_length: 120
   tables: false
+MD014: false
+MD025: # First heading should be a top-levelheading
+  front_matter_title: "" # Allow front-matter titles (e.g., Jekyll/Hugo)
+MD026: false # Disable "Trailing punctuation in headings" rule
 MD033:
   allowed_elements:
     - "details"

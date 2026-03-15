@@ -1,24 +1,28 @@
 # dotfiles
 
-## Description
+- **2026-03-14**
 
-User setup i use on Debian Bookworm (GNOME) distribution.
+  Update nvim setup.
 
-**08-25-2025** - Updated for Debian 13 Trixie.
+  Update `.editorconfig` and `.markdownlint.yaml` setup in `./bash/` and in root folder.
+
+  Add note about `nvim` link in `/usr/bin/nvim` to `/opt/nvim-linux64/bin`.
+
+- **2025-08-25**
+
+  Updated for Debian 13 Trixie.
 
 ## Table of contents
 
-1. [About](#about)
-2. [Stow](#stow)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [TODO](#todo)
-
-## About
+1. [Stow](#stow)
+2. [Installation](#installation)
 
 ## Stow
 
-A symlink farm manager which takes distinct packages of software and/or data located in a separate directories of the filesystem, and makes them appear to be installed in the same place. For example. `/usr/local/bin` could contain symlinks to files within `/usr/local/stow/emacs/bin`, `/usr/local/stow/perl/bin` etc., and likewise recursively for any other subdirectories such as `.../share`, `.../main`, and so on.
+A symlink farm manager which takes distinct packages of software and/or data located in a separate directories of the
+file system, and makes them appear to be installed in the same place. For example. `/usr/local/bin` could contain
+symlinks to files within `/usr/local/stow/emacs/bin`, `/usr/local/stow/perl/bin` etc., and likewise recursively for any
+other subdirectories such as `.../share`, `.../main`, and so on.
 
 Three terms to know before start working with Stow:
 
@@ -26,7 +30,7 @@ Three terms to know before start working with Stow:
 - Stow Directory,
 - Target Directory.
 
-```
+```text
 +-- ~/.dotfiles                 # stow directory
 |   +-- git/                    # package
 |       +-- .gitconfig
@@ -107,7 +111,8 @@ sudo apt install fish
 
 The most up to date installation script for nvm can be found in the [nvm repository](https://github.com/nvm-sh/nvm).
 
-**Important** Below will not form with fish shell, it is meant to be run in bash or zsh.
+> [!IMPORTANT]
+> Below will not work with fish shell, it is meant to be run in bash or zsh.
 
 ```bash
 // with curl
@@ -117,7 +122,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ```
 
-To make it work with fish shell, take a look at [nvm.fish](https://github.com/jorgebucaran/nvm.fish) plugin.
+> [!NOTE]
+> To make it work with fish shell, take a look at [nvm.fish](https://github.com/jorgebucaran/nvm.fish) plugin.
 
 ```bash
 fisher install jorgebucaran/nvm.fish
@@ -140,7 +146,8 @@ This will set the latest lts as a default version for all new shells.
 
 ### nvim
 
-Before installing nvim make sure that the below packages are also installed.
+> [!IMPORTANT]
+> Before installing nvim make sure that the below packages are also installed.
 
 ```bash
 # pdflatex used in markdown-preview
@@ -158,19 +165,22 @@ git clone https://github.com/latex-lsp/tree-sitter-latex.git
 cd tree-sitter-latex
 tree-sitter generate
 
-# CLI for mermaid
+# cli for mermaid
 npm install -g @mermaid-js/mermaid-cli
 
 # neovim
 npm install -g neovim
 ```
 
+> [!IMPORTANT]
+> I replaced the default `nvim` from `/usr/bin/nvim` by a link to `/opt/nvim-linux64/bin/nvim`!
+
 ### lazygit
 
 For **Debian 13 Trixie**
 
 ```bash
-$ sudo apt install lazygit
+sudo apt install lazygit
 ```
 
 For **Debian 12**
@@ -190,7 +200,3 @@ Verify the correct installation using:
 ```bash
 lazygit --version
 ```
-
-## Usage
-
-## TODO
