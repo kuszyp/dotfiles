@@ -2,7 +2,7 @@
 
 - **2026-03-14**
 
-  Update nvim setup.
+  Update nvim setup and disable Markdown render by default.
 
   Update `.editorconfig` and `.markdownlint.yaml` setup in `./bash/` and in root folder.
 
