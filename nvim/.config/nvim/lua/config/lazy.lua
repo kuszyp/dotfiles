@@ -29,7 +29,6 @@ require("lazy").setup({
 
     -- extras.editor
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
-    { import = "lazyvim.plugins.extras.editor.refactoring" },
     { import = "lazyvim.plugins.extras.editor.illuminate" },
     { import = "lazyvim.plugins.extras.editor.navic" },
 
@@ -55,7 +54,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.sql" },
 
     -- extras.lsp
-    { import = "lazyvim.plugins.extras.lsp.none-ls"},
+    { import = "lazyvim.plugins.extras.lsp.none-ls" },
 
     -- import/override with your plugins
     { import = "plugins" },
